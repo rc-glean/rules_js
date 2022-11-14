@@ -26,11 +26,28 @@ js_library(
     ],
 )
 
+filegroup(
+    name = "css_webpack_deps",
+    srcs = [
+        ":index.css.ts",
+        # Note(ray): tried to just dump all node_modules, also didn't resolve
+        ":node_modules",
+        ":node_modules/@vanilla-extract/webpack-plugin",
+        ":node_modules/css-loader",
+        ":node_modules/mini-css-extract-plugin",
+        ":node_modules/webpack",
+        ":node_modules/webpack-cli",
+        # Note(ray): tried adding schema-utils directly to resolve, no dice
+        ":node_modules/schema-utils",
+    ],
+)
+
 bin.webpack_cli(
     name = "bundle",
     srcs = [
         "webpack.config.js",
         ":lib",
+        ":css_webpack_deps"
     ],
     outs = [
         "dist/main.js",

@@ -2,8 +2,10 @@
     "name": "webpack_cli_example",
     "private": true,
     "dependencies": {
+        "@vanilla-extract/css": "^1.9.1",
         "css-loader": "^6.7.2",
-        "mathjs": "10.6.1"
+        "mathjs": "10.6.1",
+        "schema-utils": "^4.0.0"
     },
     "devDependencies": {
         "@vanilla-extract/webpack-plugin": "^2.2.0",
