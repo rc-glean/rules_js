@@ -38,14 +38,14 @@ filegroup(
         ":node_modules/webpack",
         ":node_modules/webpack-cli",
         # Note(ray): tried adding schema-utils directly to resolve, no dice
-        ":node_modules/schema-utils",
+        # ":node_modules/schema-utils",
     ],
 )
 
 bin.webpack_cli(
     name = "bundle",
     srcs = [
-        "webpack.config.js",
+        ":webpack.config.js",
         ":lib",
         ":css_webpack_deps"
     ],

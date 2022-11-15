@@ -97,7 +97,8 @@ npm_translate_lock(
         # other direct dependencies in the `examples/npm_deps/package.json`.
         "ms@2.1.3": ["examples/npm_deps"],
         # Note(ray): hoisting issue? Does not resolve
-        "schema-utils@4.0.0": ["examples/webpack_cli"],
+        # "schema-utils@4.0.0": ["examples/webpack_cli"],
+        "schema-utils@4.0.0": [""],
     },
     verify_node_modules_ignored = "//:.bazelignore",
 )
